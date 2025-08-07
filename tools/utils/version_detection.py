@@ -95,6 +95,8 @@ def detect_version(path: str, debug: bool = False) -> str:
             ):
                 return YOLOV5_CONVERSION
 
+        return YOLOV7_CONVERSION
+
     except subprocess.CalledProcessError as e:
         raise RuntimeError() from e
     finally:
